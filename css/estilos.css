@@ -1,0 +1,349 @@
+/* Declaracion de variables de css */
+:root {
+    --color-primario: #4C9FC8;
+    --color-secundario: #AC4FC6;
+    --color-gris: dimgrey;
+    --font-raleway: 'Raleway', sans-serif;
+    --font-yanone: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+/* ------------------------------------ Generales ------------------------------------------------------------ */
+html, body{
+    font-size: 14px;
+    font-family: var(--font-raleway) !important;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 769px){
+    html, body{
+        font-size: 15px;
+    }
+}
+
+.min-vh-15{
+    min-height: 15vh;
+}
+
+.section-padding{
+    min-height: 85vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.titulo{
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    text-transform: uppercase;
+    color: #4C9FC8;
+    text-align: center;
+    margin: 0;
+    padding-top: 1rem;
+    font-family: var(--font-yanone);
+    font-weight: bold;
+}
+
+.titulo-blanco{
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding-top: 1rem;
+    font-family: var(--font-yanone);
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 5px #84329B;
+}
+
+.sub-titulo{
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-gris);
+    margin: 0.3rem 0 2rem;
+    text-transform: uppercase;
+}
+
+.sub-titulo-blanco {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    margin: 0.3rem 0 2rem;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------ /Generales ----------------------------------------------------------- */
+
+
+/* -------------------------------------- Nav ---------------------------------------------------------------- */
+/* Cambio Font Family, Font Size, le agregue una sombra y lo puse en mayuscula */
+nav{
+    font-family: var(--font-yanone);
+    font-size: 1.75rem;
+    box-shadow: 2px 2px 10px #666;
+    text-transform: uppercase;
+}
+
+/* Cambio el color de fondo */
+nav.bg-custom-vrf{
+    background-color: var(--color-primario);
+}
+
+.logo-vrf img {
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+}
+/* -------------------------------------- /Nav --------------------------------------------------------------- */
+
+
+/* -------------------------------------- Header ------------------------------------------------------------- */
+header{
+    background-image: url("../imagenes/portada-VRF.jpg");
+    background-size: cover;
+    padding-top: 15vh;
+    font-family: var(--font-yanone);
+}
+
+header > .logo-header{
+    max-height: 13rem;
+}
+
+@media only screen and (min-width: 769px){
+    header > .logo-header{
+        max-height: 17rem;
+    }
+}
+
+header > h1{
+    font-size: 3.25rem;
+}
+header > p{
+    font-weight: 500;
+    font-size: 2rem;
+    max-width: 35.7rem;
+    line-height: 2.125rem;
+}
+/* -------------------------------------- /Header ------------------------------------------------------------ */
+
+
+/* -------------------------------------- Nosotras ------------------------------------------------------------ */
+#imagen-nosotras{
+    box-shadow: 2px 2px 10px #666;
+}
+#nosotras p{
+    color: var(--color-gris);
+}
+
+/* -------------------------------------- /Nosotras ----------------------------------------------------------- */
+
+
+/* -------------------------------------- Trabajos Realizados ------------------------------------------------- */
+#trabajos-realizados{
+    background-color: var(--color-secundario);
+}
+
+.foto-contenedor img a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 0;
+    position: relative;
+    display: block;
+}
+
+.foto-contenedor .icon-ver-mas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-weight: bold !important;
+    font-size: 2.66rem;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.foto-contenedor .icon-ver-mas:before {
+    font-family: "Font Awesome 5 Free", serif;
+    font-weight: 900;
+    content: "\f0fe";
+    color: var(--color-secundario);
+    opacity: 0.75;
+}
+
+.foto-contenedor img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.foto-contenedor:hover img{
+    opacity: 0.3;
+}
+
+.foto-contenedor:hover .icon-ver-mas{
+    opacity: 1;
+    background-color: rgba(255,255,255,0);
+    font-size: 3.25rem;
+}
+/* -------------------------------------- /Trabajos Realizados ------------------------------------------------ */
+
+/* -------------------------------------- Footer -------------------------------------------------------------- */
+footer{
+    background-color: var(--color-primario);
+}
+
+.lista-horizontal{
+    list-style-type: none;
+}
+
+footer a{
+    display: inline-block;
+    font-size: 5rem;
+    transition: all 0.3s ease;
+}
+
+footer a:hover{
+    transform: scale(1.05);
+    text-decoration: none;
+}
+/* -------------------------------------- /Footer ------------------------------------------------------------- */
+
+
+/* -------------------------------------- Propuestas ---------------------------------------------------------- */
+#propuestas{
+    margin-top: 15vh;
+}
+
+.propuesta
+{
+    transition: all 0.3s ease;
+}
+
+.propuesta:hover
+{
+    transform: translateY(-5px);
+}
+
+.propuesta p{
+    color: var(--color-gris);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/* -------------------------------------- /Propuestas --------------------------------------------------------- */
+
+
+/* -------------------------------------- Paquetes ------------------------------------------------------------ */
+#paquetes{
+    background-color: var(--color-secundario);
+}
+
+/* Se cambio la altura minima del body, se hizo flex para poder centrar */
+#paquetes .card-body{
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Le agregue una sobra y le saque el border que no quedaba lindo */
+#paquetes .card{
+    border: none;
+    box-shadow: 2px 2px 10px #666;
+}
+
+/* Cambio la familia de la tipografia, agrande el tamaño y le cambie el color */
+#paquetes .card-body .card-title{
+    font-family: var(--font-yanone);
+    font-size: 2rem;
+    color: var(--color-secundario);
+}
+
+/* Flex para centrar, cambio de color y flex 1 para que ocupe el espacio entero */
+#paquetes .card-body .card-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: var(--color-gris);
+}
+
+.paquete:hover .icon-destacado{
+    transform: scale(1.5);
+}
+
+.icon-destacado {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    color: white;
+}
+/* -------------------------------------- /Paquetes ------------------------------------------------------------ */
+
+
+/* -------------------------------------- Contacto ------------------------------------------------------------- */
+#contacto{
+    margin-top: 15vh;
+}
+
+#formulario{
+    background-color: var(--color-primario);
+    padding: 20px;
+    color: white;
+}
+
+/* Cambio de Border, Radio y fondo en blanco */
+#contacto input{
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 0.25rem;
+    background-color: white;
+}
+
+/* Cambio de color, color de fondo, ancho, tamaño de la fuente, mayusculas, bold, espacios, sombra y sin bordes */
+#contacto .btn-vrf{
+    color: var(--color-primario);
+    background-color: white;
+    width: 100%;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    box-shadow: 2px 2px 10px #666;
+}
+
+#contacto .datos {
+    font-size: 2rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+}
+/* -------------------------------------- /Contacto ------------------------------------------------------------ */
+
+
+/* ---------------------------------------- FAQs --------------------------------------------------------------- */
+
+/* Solo afectamos este acordion, tal vez en un futuro si hubiese otros tendrian estilos diferentes. */
+#preguntas-frecuentes-accordion .accordion-button:not(.collapsed){
+    color: white;
+    background-color: var(--color-primario);
+}
+
+/* --------------------------------------- /FAQs --------------------------------------------------------------- */
+
+/* -------------------------------------- Sumate --------------------------------------------------------------- */
+
+#que-buscamos{
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    text-transform: uppercase;
+    color: #4C9FC8;
+    margin: 0;
+    font-family: var(--font-yanone);
+    font-weight: bold;
+}
+
+/* ------------------------------------- /Sumate --------------------------------------------------------------- */
